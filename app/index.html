@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ibm demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <script src="app.js"></script>
+    <script src="shared/mainController.js"></script>
+    <script src="home/homeController.js"></script>
+    <script src="shared/userFactory.js"></script>
+</head>
+
+<body ng-controller="mainController">
+
+    <div class="header-fixed">
+        <div class="page-header-inner">
+            <div class="navicon">
+                <a href="#" class="menu-toggler">
+                    <i class="fa fa-navicon"></i>
+                </a>
+            </div>
+            <div class="logo">
+                logo
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="column column-left">
+            <ul class="top-level">
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="column column-center">
+            <div ng-view></div>
+        </div>
+
+</body>
+</html>
