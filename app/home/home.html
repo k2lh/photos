@@ -1,38 +1,21 @@
 <div class="container-fluid" ng-controller="homeController">
     <div class="row">
-        <div class="col-md-12">
-            <h4>photos</h4>
+        <div class="col-md-12" ng-repeat="r in results2 track by $index">
+            <div class="row">
+                <div class="col-md-8">
+                    <a data-ng-href="https://www.flickr.com/photos/132365033@N08/{{r.id}}/" itle="{{r.title}}">
+                        <img data-ng-src="https://farm{{r.farm}}.staticflickr.com/{{r.server}}/{{r.id}}_{{r.secret}}_b.jpg" width="100%" alt="{{r.title}}">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <h4>{{r.title}}</h4>
+                    <p>uploaded: {{r.info.date  * 1000 | date:'MM-dd-yyyy'}}</p>
+                    <p>views: {{r.info.views}}</p>
+                    <p>camera: {{r.camera}}</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
 
-        {{photos}}
-
-
-        </div>
-    </div>
-</div>
-
-<table class="table table-bordered">
-  <tr>
-    <td>#</td>
-    <td>ID</td>
-    <td>title</td>
-    <td>farm</td>
-    <td>img</td>
-    <td>views</td>
-  </tr>
-  <tr ng-repeat="r in results2 track by $index">
-    <td>{{r.num}}</td>
-    <td>{{r.id}}</td>
-    <td>{{r.title}}</td>
-    <td>{{r.farm}}</td>
-    <td>
-        <a data-ng-href="https://www.flickr.com/photos/132365033@N08/{{r.id}}/" itle="{{r.title}}">
-            <img data-ng-src="https://farm{{r.farm}}.staticflickr.com/{{r.server}}/{{r.id}}_{{r.secret}}_b.jpg" width="500" height="294" alt="{{r.title}}">
-        </a>
-        </td>
-    <td>{{r.views}}</td>
   </tr>
 </table>
