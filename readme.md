@@ -1,4 +1,5 @@
-demo flickr api app for ibm
+mini-flickr app:
+
 
 npm install
 
@@ -12,6 +13,8 @@ cd photos
 
 serve
 
+
 gulp watch
+
 
 localhost:/3000/app
