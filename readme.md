@@ -1,20 +1,24 @@
 mini-flickr app:
 
 
-npm install
+    npm install
 
-bower install
+    bower install
 
-npm install gulp
+    npm install gulp
 
-npm install -g serve
+    npm install -g serve
 
-cd photos
+    cd photos
 
-serve
-
-
-gulp watch
+    serve
 
 
-localhost:/3000/app
+separate console tab:
+
+    gulp watch
+
+
+in browser:
+
+    localhost:/3000/app
