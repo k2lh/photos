@@ -5009,6 +5009,15 @@ html {
   width: 100%;
   max-width: 1300px;
 }
+.icon {
+  color: #AAA;
+  font-size: 18px;
+  position: relative;
+  top: 3px;
+}
+form.form-horizontal {
+  margin-top: 8px;
+}
 .box {
   margin: 15px 0 0 0;
   padding: 0;

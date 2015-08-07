@@ -1,6 +1,22 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="homeController">
 
-    <div ng-repeat="r in results2 track by $index">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <ul class="nav nav-pills">
+              <li role="presentation" class="active"><a href="" ng-click="order('title')">All</a></li>
+              <li role="presentation"><a href="" ng-click="order('date')">Most Recent</a></li>
+              <li role="presentation"><a href="" ng-click="order('view')">Most Viewed</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <form class="form-horizontal">
+                <input ng-model="query" class="form-control" type="text" placeholder="Filter by">
+            </form>
+        </div>
+    </div>
+
+
+    <div ng-repeat="r in results2| filter:query  track by $index ">
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="box">
                 <div class="outer">
@@ -9,14 +25,34 @@
                     </a>
                 </div>
                 <div class="inner">
-                    <h4>{{r.title}}</h4>
-                    <p>uploaded: {{r.info.date  * 1000 | date:'MM-dd-yyyy'}}</p>
-                    <p>views: {{r.info.views}}</p>
-                    <p>camera: {{r.camera}}</p>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{{r.title}}</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p>{{r.username}}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <p>{{r.date  * 1000 | date:'MM-dd-yyyy'}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p><span class="icon icon-favorite"></span> {{r.fave}}</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p><span class="icon icon-visibility"></span> {{r.views}}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <div ng-show="r.camera">
+                                <p><span class="icon icon-camera_alt"></span> {{r.camera}}</p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
 
-  </tr>
-</table>
+</div>
