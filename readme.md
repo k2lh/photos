@@ -22,3 +22,7 @@ separate console tab:
 in browser:
 
     localhost:/3000/app
+
+in heroku:
+
+    https://blooming-atoll-3476.herokuapp.com/#/
