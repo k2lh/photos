@@ -1,14 +1,14 @@
 <div class="container-fluid" ng-controller="homeController">
 
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
             <ul class="nav nav-pills">
               <li role="presentation" class="active"><a href="" ng-click="order('title')">All</a></li>
               <li role="presentation"><a href="" ng-click="order('date')">Most Recent</a></li>
               <li role="presentation"><a href="" ng-click="order('view')">Most Viewed</a></li>
             </ul>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
             <form class="form-horizontal">
                 <input ng-model="query" class="form-control" type="text" placeholder="Filter by">
             </form>
