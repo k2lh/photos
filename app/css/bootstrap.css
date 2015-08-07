@@ -5004,83 +5004,54 @@ html {
   display: inline;
   float: left;
 }
-.header-fixed .userinfo {
-  width: 40%;
-  display: inline;
-  float: left;
-}
-.header-fixed .sidebar {
-  margin: 0;
-  padding: 10px 0 0 0;
-  width: 40px;
-  display: inline;
-  float: right;
-}
 .wrapper {
-  display: table;
-  margin-top: 50px;
+  margin: 50px auto;
   width: 100%;
+  max-width: 1300px;
 }
-.wrapper .column {
-  display: table-cell;
-  padding: 10px;
-  height: 100%;
-  vertical-align: top;
-}
-.wrapper .column.column-left {
+.box {
+  margin: 15px 0 0 0;
   padding: 0;
-  width: 48px;
-  background: #FAFAFA;
-  border-right: 1px solid #CCC;
+  border: 1px solid #EEE;
 }
-.wrapper .column.column-center {
+.box .outer {
+  overflow: hidden;
+}
+.box .outer img {
   width: 100%;
-  margin: 0 0 0 48px;
+  padding: 3px;
 }
-.wrapper .column.column-right {
-  width: 200px;
-  display: none;
-  border: 1px solid red;
-}
-ul.top-level {
+.box .inner {
   margin: 0;
-  padding: 0;
-  width: 48px;
-  text-align: center;
+  padding: 0 10px;
+  background: #FEFEFE;
 }
-ul.top-level li {
-  margin: 0;
-  padding: 10px 0;
-  list-style: none;
-  width: 100%;
-  border-bottom: 1px solid #CCC;
+.box .inner p {
+  font: 300 12px/1 "Open Sans", arial, sans-serif;
+  color: #555;
 }
-ul.top-level li .fa {
-  font-size: 24px;
+@media only screen and (max-width: 767px) {
+  .box {
+    height: auto;
+  }
 }
-ul.top-level li ul {
-  display: none;
+@media only screen and (min-width: 768px) {
+  .box {
+    height: 350px;
+  }
+  .box .outer {
+    max-height: 240px;
+  }
 }
-.row {
-  padding-top: 20px;
+@media only screen and (min-width: 992px) {
+  .box {
+    height: 340px;
+  }
 }
-.circle {
-  display: block;
-  float: right;
-  width: 50px;
-  height: 50px;
-  background: yellow;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-}
-.todo {
-  color: red;
-  font-weight: 400;
-}
-.hint {
-  font-style: italic;
-  color: orange;
+@media only screen and (min-width: 1100px) {
+  .box {
+    height: 350px;
+  }
 }
 .triangle-up {
   width: 0;

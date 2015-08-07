@@ -23,8 +23,8 @@
 
     <script src="app.js"></script>
     <script src="shared/mainController.js"></script>
-    <script src="home/homeController.js"></script>
     <script src="shared/userFactory.js"></script>
+    <script src="home/homeController.js"></script>
 </head>
 
 <body ng-controller="mainController">
@@ -43,24 +43,8 @@
     </div>
 
     <div class="wrapper">
-        <div class="column column-left">
-            <ul class="top-level">
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="column column-center">
-            <div ng-view></div>
-        </div>
+        <div ng-view></div>
+    </div>
 
 </body>
 </html>
